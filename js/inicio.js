@@ -1,4 +1,5 @@
 // ===== EMAILJS =====
+const emailjs = window.emailjs; // Declare the emailjs variable
 (function () {
   emailjs.init("VH2Qm-256a4H7GEtp"); // Public Key
 })();
@@ -12,13 +13,40 @@ const navLinks = document.querySelectorAll(".nav-link");
 navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("active");
   navMenu.classList.toggle("active");
+  // Prevenir scroll cuando el menú está abierto
+  document.body.style.overflow = navMenu.classList.contains("active")
+    ? "hidden"
+    : "";
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navToggle.classList.remove("active");
     navMenu.classList.remove("active");
+    document.body.style.overflow = "";
   });
+});
+
+// Cerrar menú al hacer click fuera
+document.addEventListener("click", (e) => {
+  if (
+    navMenu.classList.contains("active") &&
+    !navMenu.contains(e.target) &&
+    !navToggle.contains(e.target)
+  ) {
+    navToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+});
+
+// Cerrar menú con tecla Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navMenu.classList.contains("active")) {
+    navToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+    document.body.style.overflow = "";
+  }
 });
 
 window.addEventListener("scroll", () => {
@@ -99,7 +127,7 @@ contactForm.addEventListener("submit", async (e) => {
     await emailjs.send("service_lk20xd6", "template_vleqdoa", templateParams);
 
     formStatus.textContent =
-      "Mensaje enviado correctamente. Te voy a responder pronto 😊";
+      "Mensaje enviado correctamente. Te voy a responder pronto :)";
     formStatus.classList.add("success");
     contactForm.reset();
   } catch (error) {
@@ -120,7 +148,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      const navHeight = document.querySelector(".nav").offsetHeight;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
     }
   });
 });
@@ -129,13 +163,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const footerYear = document.querySelector(".footer-year");
 if (footerYear) footerYear.textContent = new Date().getFullYear();
 
-// ===== PARALLAX HERO =====
-window.addEventListener("scroll", () => {
-  const heroImage = document.querySelector(".hero-image-wrapper");
-  if (heroImage) {
-    heroImage.style.transform = `translateY(${window.pageYOffset * 0.1}px)`;
+// ===== PARALLAX HERO (solo en pantallas grandes) =====
+function handleParallax() {
+  if (window.innerWidth > 768) {
+    const heroImage = document.querySelector(".hero-image-wrapper");
+    if (heroImage) {
+      heroImage.style.transform = `translateY(${window.pageYOffset * 0.1}px)`;
+    }
   }
-});
+}
+
+window.addEventListener("scroll", handleParallax);
 
 // ===== TYPING EFFECT =====
 function typeWriter(element, text, speed = 70) {
@@ -167,4 +205,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-console.log("Portfolio cargado y EmailJS funcionando 🚀");
+// ===== RESIZE HANDLER =====
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    // Cerrar menú móvil en resize a desktop
+    if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
+      navToggle.classList.remove("active");
+      navMenu.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  }, 250);
+});
+
+console.log("Portfolio cargado correctamente");
