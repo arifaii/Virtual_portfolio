@@ -10,24 +10,23 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
+// Toggle menu dropdown
 navToggle.addEventListener("click", () => {
-  navToggle.classList.toggle("active");
+  const isActive = navToggle.classList.toggle("active");
   navMenu.classList.toggle("active");
-  // Prevenir scroll cuando el menú está abierto
-  document.body.style.overflow = navMenu.classList.contains("active")
-    ? "hidden"
-    : "";
+  navToggle.setAttribute("aria-expanded", isActive);
 });
 
+// Cerrar menu al hacer click en un link
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navToggle.classList.remove("active");
     navMenu.classList.remove("active");
-    document.body.style.overflow = "";
+    navToggle.setAttribute("aria-expanded", "false");
   });
 });
 
-// Cerrar menú al hacer click fuera
+// Cerrar menu al hacer click fuera
 document.addEventListener("click", (e) => {
   if (
     navMenu.classList.contains("active") &&
@@ -36,16 +35,16 @@ document.addEventListener("click", (e) => {
   ) {
     navToggle.classList.remove("active");
     navMenu.classList.remove("active");
-    document.body.style.overflow = "";
+    navToggle.setAttribute("aria-expanded", "false");
   }
 });
 
-// Cerrar menú con tecla Escape
+// Cerrar menu con tecla Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && navMenu.classList.contains("active")) {
     navToggle.classList.remove("active");
     navMenu.classList.remove("active");
-    document.body.style.overflow = "";
+    navToggle.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -210,11 +209,11 @@ let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
-    // Cerrar menú móvil en resize a desktop
+    // Cerrar menu movil en resize a desktop
     if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
       navToggle.classList.remove("active");
       navMenu.classList.remove("active");
-      document.body.style.overflow = "";
+      navToggle.setAttribute("aria-expanded", "false");
     }
   }, 250);
 });

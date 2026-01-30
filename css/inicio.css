@@ -926,33 +926,76 @@ img {
     padding: 0 1rem;
   }
 
-  /* Navegación móvil */
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-bg);
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    gap: 1.5rem;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all var(--transition-normal);
-    border-top: 1px solid var(--color-border);
-    overflow-y: auto;
+  /* Navegación móvil - Menu desplegable hacia abajo */
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 70px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  .nav-menu.active {
-    transform: translateX(0);
-    opacity: 1;
+  .nav-logo {
+    padding: 1.25rem 0;
   }
 
   .nav-toggle {
     display: flex;
+    padding: 1.25rem 0;
+  }
+
+  .nav-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    padding: 0;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    transform: none;
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 400px;
+    padding: 0.75rem 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 0;
+    transition:
+      background var(--transition-fast),
+      color var(--transition-fast);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(0, 212, 170, 0.1);
+    color: var(--color-primary);
+  }
+
+  .nav-link::after {
+    display: none;
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -965,11 +1008,6 @@ img {
 
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
   }
 
   /* Hero móvil */
@@ -1078,17 +1116,22 @@ img {
   }
 
   .nav-container {
-    padding: 0 1rem;
-    height: 60px;
+    padding: 0 0.75rem;
+    min-height: 60px;
   }
 
   .nav-logo {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 1rem 0;
   }
 
-  .nav-menu {
-    top: 60px;
-    padding: 1.5rem;
+  .nav-toggle {
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
 
   /* Hero pequeño */
