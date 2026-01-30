@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Ariela Faivisovich Krowicki - Frontend Developer & UX/UI Designer
+    </title>
+    <meta
+      name="description"
+      content="Portfolio de Ariela Faivisovich Krowicki - Desarrolladora Frontend y Diseñadora UX/UI. Creando experiencias digitales atractivas y funcionales."
+    />
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="nav" class="nav">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">Ariela F.K.</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Inicio</a></li>
+          <li><a href="#about" class="nav-link">Sobre mí</a></li>
+          <li><a href="#experience" class="nav-link">Experiencia</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="hero-greeting animate-fade-up">Hola, soy</p>
+            <h1 class="hero-title animate-fade-up delay-1">
+              <span id="typed-name" class="typed-text"></span
+              ><span class="cursor">|</span>
+            </h1>
+            <h2 class="hero-subtitle animate-fade-up delay-2">
+              Frontend Developer & UX/UI Designer
+            </h2>
+            <p class="hero-description animate-fade-up delay-3">
+              Soy una desarrolladora frontend y diseñadora UX/UI apasionada por
+              crear experiencias digitales atractivas y funcionales. Con un
+              enfoque en la usabilidad y el diseño centrado en el usuario, me
+              esfuerzo por transformar ideas en productos digitales
+              excepcionales.
+            </p>
+            <div class="hero-buttons animate-fade-up delay-4">
+              <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+              <a href="#contact" class="btn btn-secondary">Contactarme</a>
+            </div>
+            <div class="hero-social animate-fade-up delay-5">
+              <a
+                href="https://github.com/arifaii"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ariela-faivisovich-krowicki/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href="mailto:faivisovichariela1@gmail.com"
+                class="social-link"
+                aria-label="Email"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image animate-fade-left">
+            <div class="hero-image-wrapper">
+              <div class="hero-image-decoration"></div>
+              <div class="hero-image-placeholder">
+                <span>Tu foto aquí</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <h2 class="section-title">Sobre mí</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Soy una desarrolladora frontend apasionada con experiencia en
+                crear interfaces de usuario modernas y responsivas. Mi objetivo
+                es combinar diseño y funcionalidad para crear experiencias web
+                que los usuarios amen.
+              </p>
+              <p>
+                Me especializo en HTML, CSS, JavaScript y frameworks modernos.
+                Siempre estoy aprendiendo nuevas tecnologías y mejorando mis
+                habilidades para estar al día con las últimas tendencias del
+                desarrollo web.
+              </p>
+            </div>
+            <div class="skills">
+  <h3>Habilidades técnicas</h3>
+  <div class="skills-grid">
+
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+      </div>
+      <span>HTML / CSS</span>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m18 16 4-4-4-4" />
+          <path d="m6 8-4 4 4 4" />
+          <path d="m14.5 4-5 16" />
+        </svg>
+      </div>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </svg>
+      </div>
+      <span>React</span>
+    </div>
+
+    <!-- PYTHON -->
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2c-4 0-4 2-4 2v4h8V6s0-2-4-2z" />
+          <path d="M8 8c-4 0-4 2-4 2v4h8v-4s0-2-4-2z" />
+          <circle cx="10" cy="4" r="1" />
+          <circle cx="10" cy="10" r="1" />
+        </svg>
+      </div>
+      <span>Python</span>
+    </div>
+
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z" />
+          <path d="M7 7h.01" />
+        </svg>
+      </div>
+      <span>Figma</span>
+    </div>
+
+    <!-- SWIFT -->
+    <div class="skill-item">
+      <div class="skill-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 4c-4 8-10 12-16 16" />
+          <path d="M6 4c2 4 6 8 10 10" />
+        </svg>
+      </div>
+      <span>Swift</span>
+    </div>
+
+  </div>
+</div>
+
+      </section>
+
+      <!-- Experience Section -->
+      <!-- Experience Section -->
+<section id="experience" class="experience section">
+  <div class="container">
+    <h2 class="section-title">Experiencia</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Noviembre 2025</div>
+          <h3 class="timeline-title">Data entry</h3>
+          <p class="timeline-company">
+            Proyecto escolar - Técnica N°1 "Manuel Belgrano"
+          </p>
+          <p class="timeline-description">
+            Realicé tareas de data entry de información.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Mayo 2025 - Agosto 2025</div>
+          <h3 class="timeline-title"> Pasantía Tecno 3F</h3>
+          <p class="timeline-company">
+            Pasantía en Escuela de Tecnología de la Municipalidad de Tres de Febrero
+          </p>
+          <p class="timeline-description">
+            Me encargué de programar el front-end de un campus virtual en ReacJS.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Marzo 2025 - Octubre 2025</div>
+          <h3 class="timeline-title">Documentación de sistema</h3>
+          <p class="timeline-company">
+            Proyecto escolar - Técnica N°1 "Manuel Belgrano"
+          </p>
+          <p class="timeline-description">
+            Participé y dirigí el sector de documentación.
+            Creación de manuales de usuario y guías técnicas para el sistema
+            desarrollado. 
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Diciembre 2024</div>
+          <h3 class="timeline-title">Diseño UX/UI</h3>
+          <p class="timeline-company">Proyectos académicos y personales</p>
+          <p class="timeline-description">
+            Diseño de sistema web escolar según requisitos de usuario.
+            Creación de wireframes, prototipos y diseño visual utilizando
+            herramientas como Figma.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024</div>
+          <h3 class="timeline-title">Base de datos</h3>
+          <p class="timeline-company">Proyecto para Municipalidad de 3F </p>
+          <p class="timeline-description">
+            Desarrollo de la base de datos para sistema de entrada de la Municipalidad de Tres de Febrero.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2024</div>
+          <h3 class="timeline-title">Data entry</h3>
+          <p class="timeline-company">Proyectos freelance / académicos</p>
+          <p class="timeline-description">
+            Ingreso de datos acerca de profesores en la Institución.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2023</div>
+          <h3 class="timeline-title">Sistema de Organización de aulas</h3>
+          <p class="timeline-company">Proyecto escolar</p>
+          <p class="timeline-description">
+            Desarrollo de sistema para la organización de aulas en la Institución.
+            Realizado en Python.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects section">
+        <div class="container">
+          <h2 class="section-title">Proyectos</h2>
+          <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img
+                        src="img/proyecto1.png"
+                        alt="Imagen del proyecto"
+                        class="project-img"
+                    />
+                </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Campus virtual</h3>
+                <p class="project-description">
+                  Campus virtual realizado con el objetivo de mejorar la experiencia
+                  de los usuarios.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">UX</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/jenngold20/campusTecno"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                      />
+                      <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                    <span>Código</span>
+                  </a>
+                  <a
+                    href="https://nimble-gecko-780e2e.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" x2="21" y1="14" y2="3" />
+                    </svg>
+                    <span>Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- Proyecto 2 -->
+            <article class="project-card">
+              <div class="project-image">
+                    <img
+                        src="img/proyecto2.jpeg"
+                        alt="Imagen del proyecto"
+                        class="project-img"
+                    />
+                </div>
+              <div class="project-content">
+                <h3 class="project-title">Sistema web escolar</h3>
+                <p class="project-description">
+                  Web informativa para mantener informados a las familias de estudiantes
+                    sobre noticias, eventos y recursos escolares.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Documentación</span>
+                  <span class="tag">Data entry</span>
+                </div>
+                
+            </article>
+            <!-- Proyecto 3 -->
+            <article class="project-card">
+              <div class="project-image">
+                    <img
+                        src="img/proyecto3.png"
+                        alt="Imagen del proyecto"
+                        class="project-img"
+                    />
+                </div>
+              <div class="project-content">
+                <h3 class="project-title">App de insumos de mascotas</h3>
+                <p class="project-description">
+                  Aplicación móvil hecha para un proyecto escolar basada en que el usuario compre insumos
+                    para sus mascotas de manera fácil y rápida.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">SWIFT</span>
+                  <span class="tag">Figma</span>
+                </div>
+                
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <div class="container">
+          <h2 class="section-title">Contacto</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Trabajemos juntos</h3>
+              <p>
+                Si tienes un proyecto en mente o simplemente quieres saludar, no
+                dudes en contactarme. Estoy siempre abierta a nuevas
+                oportunidades y colaboraciones.
+              </p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <a href="mailto:faivisovichariela1@gmail.com"
+                    >faivisovichariela1@gmail.com</a
+                  >
+                </div>
+                <div class="contact-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Buenos Aires, Argentina</span>
+                </div>
+              </div>
+              <div class="contact-social">
+                <a
+                  href="https://github.com/arifaii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ariela-faivisovich-krowicki/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="tu@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  placeholder="Asunto del mensaje"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tu mensaje..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-text">Enviar mensaje</span>
+                <span class="btn-loading" style="display: none">
+                  <svg
+                    class="spinner"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      class="spinner-circle"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      fill="none"
+                      stroke-width="3"
+                    />
+                  </svg>
+                  Enviando...
+                </span>
+              </button>
+              <p id="form-status" class="form-status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Diseñado y desarrollado por Ariela Faivisovich Krowicki
+            <br>
+            &copy; 2026 Todos los derechos reservados.
+        </p>
+        
+      </div>
+    </footer>
+
+    <script src="inicio.js"></script>
+  </body>
+</html>
