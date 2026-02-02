@@ -251,7 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("[v0] ERROR: No se encontró el elemento #typed-name");
   }
 
-  // ===== RESIZE HANDLER =====
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
