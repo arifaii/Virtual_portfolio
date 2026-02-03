@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (btnText) btnText.style.display = "none";
       if (btnLoading) btnLoading.style.display = "inline-flex";
       submitBtn.disabled = true;
+
       if (formStatus) {
         formStatus.textContent = "";
         formStatus.className = "form-status";
@@ -152,21 +153,29 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        if (emailjsInstance) {
-          await emailjsInstance.send(
-            "service_lk20xd6",
-            "template_vleqdoa",
-            templateParams,
-          );
-          if (formStatus) {
-            formStatus.textContent =
-              "Mensaje enviado correctamente. Te voy a responder pronto :)";
-            formStatus.classList.add("success");
-          }
-          contactForm.reset();
-        } else {
-          throw new Error("EmailJS no disponible");
+        if (!emailjsInstance) throw new Error("EmailJS no disponible");
+
+        // 📩 1. Mail para vos
+        await emailjsInstance.send(
+          "service_lk20xd6",
+          "template_vleqdoa",
+          templateParams,
+        );
+
+        // 📩 2. Auto-respuesta para el usuario
+        await emailjsInstance.send(
+          "service_lk20xd6",
+          "template_8j0oh3l",
+          templateParams,
+        );
+
+        if (formStatus) {
+          formStatus.textContent =
+            "Mensaje enviado correctamente. Te voy a responder pronto :)";
+          formStatus.classList.add("success");
         }
+
+        contactForm.reset();
       } catch (error) {
         console.error("EmailJS Error:", error);
         if (formStatus) {
