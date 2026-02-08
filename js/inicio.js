@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const animatedElements = document.querySelectorAll(
-      ".about-content, .skills-grid .skill-item, .timeline-item, .project-card, .contact-content",
+      ".about-content, .skills-grid .skill-item, .timeline-item, .project-card, .cert-card, .contact-content",
     );
 
     animatedElements.forEach((el) => {
@@ -187,6 +187,63 @@ document.addEventListener("DOMContentLoaded", () => {
         if (btnText) btnText.style.display = "inline";
         if (btnLoading) btnLoading.style.display = "none";
         submitBtn.disabled = false;
+      }
+    });
+  }
+
+  // ===== CERTIFICACIONES =====
+  const certCards = document.querySelectorAll(".cert-card");
+  const certModalOverlay = document.getElementById("cert-modal-overlay");
+  const certModalClose = document.getElementById("cert-modal-close");
+  const certModalTitle = document.getElementById("cert-modal-title");
+  const certModalBody = document.getElementById("cert-modal-body");
+
+  // Abrir modal del visor
+  function openCertModal(card) {
+    const file = card.dataset.certFile;
+    const type = card.dataset.certType;
+    const name =
+      card.querySelector(".cert-card-name")?.textContent || "Certificado";
+
+    certModalTitle.textContent = name;
+
+    if (type === "pdf") {
+      certModalBody.innerHTML = `<iframe src="${file}" title="${name}"></iframe>`;
+    } else {
+      certModalBody.innerHTML = `<img src="${file}" alt="${name}" />`;
+    }
+
+    certModalOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  // Cerrar modal
+  function closeCertModal() {
+    certModalOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+    setTimeout(() => {
+      certModalBody.innerHTML = "";
+    }, 300);
+  }
+
+  // Click en cada card para abrir el visor
+  certCards.forEach((card) => {
+    card.addEventListener("click", () => openCertModal(card));
+  });
+
+  // Cerrar modal
+  if (certModalClose) {
+    certModalClose.addEventListener("click", closeCertModal);
+  }
+
+  if (certModalOverlay) {
+    certModalOverlay.addEventListener("click", (e) => {
+      if (e.target === certModalOverlay) closeCertModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && certModalOverlay.classList.contains("active")) {
+        closeCertModal();
       }
     });
   }

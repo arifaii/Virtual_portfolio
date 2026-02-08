@@ -721,6 +721,275 @@ img {
   color: var(--color-primary);
 }
 
+/* ===== CERTIFICATIONS ===== */
+.certifications-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.cert-upload-area {
+  border: 2px dashed var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-bottom: 2.5rem;
+  background: var(--color-bg-card);
+}
+
+.cert-upload-area:hover,
+.cert-upload-area.dragover {
+  border-color: var(--color-primary);
+  background: rgba(0, 212, 170, 0.05);
+}
+
+.cert-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.cert-upload-content svg {
+  color: var(--color-primary);
+  opacity: 0.7;
+}
+
+.cert-upload-area:hover .cert-upload-content svg {
+  opacity: 1;
+}
+
+.cert-upload-hint {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: var(--color-bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+}
+
+.cert-card-preview {
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cert-card-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-card-preview .cert-pdf-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.cert-pdf-icon svg {
+  color: var(--color-primary);
+  opacity: 0.8;
+}
+
+.cert-pdf-icon span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-card-info {
+  padding: 1.25rem;
+}
+
+.cert-card-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cert-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cert-card-type {
+  padding: 0.25rem 0.6rem;
+  background: rgba(0, 212, 170, 0.1);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cert-card-size {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.cert-card-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all var(--transition-fast);
+  z-index: 2;
+}
+
+.cert-card:hover .cert-card-remove {
+  opacity: 1;
+}
+
+.cert-card-remove:hover {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Modal visor */
+.cert-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.cert-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-modal {
+  background: var(--color-bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.95) translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.cert-modal-overlay.active .cert-modal {
+  transform: scale(1) translateY(0);
+}
+
+.cert-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.cert-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1rem;
+}
+
+.cert-modal-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.cert-modal-close:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cert-modal-body {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  min-height: 300px;
+}
+
+.cert-modal-body img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cert-modal-body iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  border-radius: 8px;
+}
+
 /* ===== CONTACT ===== */
 .contact-content {
   display: grid;
@@ -1023,6 +1292,9 @@ img {
   .nav-menu.active li:nth-child(5) {
     transition-delay: 0.25s;
   }
+  .nav-menu.active li:nth-child(6) {
+    transition-delay: 0.3s;
+  }
 
   .nav-link {
     display: block;
@@ -1125,6 +1397,36 @@ img {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  /* Certifications móvil */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-upload-area {
+    padding: 1.5rem;
+  }
+
+  .cert-upload-content span {
+    font-size: 0.9rem;
+  }
+
+  .cert-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .cert-modal-body {
+    padding: 1rem;
+  }
+
+  .cert-modal-body img {
+    max-height: 60vh;
+  }
+
+  .cert-modal-body iframe {
+    height: 60vh;
   }
 
   /* Timeline móvil */
