@@ -29,20 +29,71 @@
           aria-label="Abrir menú"
           aria-expanded="false"
           aria-controls="nav-menu"
+          data-i18n="nav.openMenu"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
         <ul id="nav-menu" class="nav-menu">
-          <li><a href="#hero" class="nav-link active">Inicio</a></li>
-          <li><a href="#about" class="nav-link">Sobre mí</a></li>
-          <li><a href="#experience" class="nav-link">Experiencia</a></li>
-          <li><a href="#projects" class="nav-link">Proyectos</a></li>
           <li>
-            <a href="#certifications" class="nav-link">Certificaciones</a>
+            <a href="#hero" class="nav-link active" data-i18n="nav.home"
+              >Inicio</a
+            >
           </li>
-          <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <li>
+            <a href="#about" class="nav-link" data-i18n="nav.about">Sobre mí</a>
+          </li>
+          <li>
+            <a href="#experience" class="nav-link" data-i18n="nav.experience"
+              >Experiencia</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-i18n="nav.projects"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#certifications"
+              class="nav-link"
+              data-i18n="nav.certifications"
+              >Certificaciones</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-i18n="nav.contact"
+              >Contacto</a
+            >
+          </li>
+          <li class="nav-lang">
+            <button
+              class="nav-lang-btn"
+              aria-label="Seleccionar idioma"
+              aria-expanded="false"
+              data-i18n="nav.selectLang"
+            >
+              <span class="current-lang">ES</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="nav-lang-dropdown">
+              <button class="lang-option active" data-lang="es">Español</button>
+              <button class="lang-option" data-lang="en">English</button>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
@@ -52,7 +103,9 @@
       <section id="hero" class="hero">
         <div class="hero-content">
           <div class="hero-text">
-            <p class="hero-greeting animate-fade-up">Hola, soy</p>
+            <p class="hero-greeting animate-fade-up" data-i18n="hero.greeting">
+              Hola, soy
+            </p>
             <h1 class="hero-title animate-fade-up delay-1">
               <span id="typed-name" class="typed-text"></span
               ><span class="cursor">|</span>
@@ -60,7 +113,10 @@
             <h2 class="hero-subtitle animate-fade-up delay-2">
               Frontend Developer & UX/UI Designer
             </h2>
-            <p class="hero-description animate-fade-up delay-3">
+            <p
+              class="hero-description animate-fade-up delay-3"
+              data-i18n="hero.description"
+            >
               Soy una desarrolladora frontend y diseñadora UX/UI apasionada por
               crear experiencias digitales atractivas y funcionales. Con un
               enfoque en la usabilidad y el diseño centrado en el usuario, me
@@ -68,8 +124,18 @@
               excepcionales.
             </p>
             <div class="hero-buttons animate-fade-up delay-4">
-              <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-              <a href="#contact" class="btn btn-secondary">Contactarme</a>
+              <a
+                href="#projects"
+                class="btn btn-primary"
+                data-i18n="hero.viewProjects"
+                >Ver proyectos</a
+              >
+              <a
+                href="#contact"
+                class="btn btn-secondary"
+                data-i18n="hero.contactMe"
+                >Contactarme</a
+              >
             </div>
             <div class="hero-social animate-fade-up delay-5">
               <a
@@ -176,16 +242,16 @@
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container">
-          <h2 class="section-title">Sobre mí</h2>
+          <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
           <div class="about-content">
             <div class="about-text">
-              <p>
+              <p data-i18n="about.p1">
                 Soy una desarrolladora frontend apasionada con experiencia en
                 crear interfaces de usuario modernas y responsivas. Mi objetivo
                 es combinar diseño y funcionalidad para crear experiencias web
                 que los usuarios amen.
               </p>
-              <p>
+              <p data-i18n="about.p2">
                 Me especializo en HTML, CSS, JavaScript y frameworks modernos.
                 Siempre estoy aprendiendo nuevas tecnologías y mejorando mis
                 habilidades para estar al día con las últimas tendencias del
@@ -193,7 +259,7 @@
               </p>
             </div>
             <div class="skills">
-              <h3>Habilidades técnicas</h3>
+              <h3 data-i18n="about.skills">Habilidades técnicas</h3>
               <div class="skills-grid">
                 <div class="skill-item">
                   <div class="skill-icon">
@@ -331,17 +397,27 @@
       <!-- Experience Section -->
       <section id="experience" class="experience section">
         <div class="container">
-          <h2 class="section-title">Experiencia</h2>
+          <h2 class="section-title" data-i18n="experience.title">
+            Experiencia
+          </h2>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">Noviembre 2025</div>
-                <h3 class="timeline-title">Data entry</h3>
-                <p class="timeline-company">
+                <h3 class="timeline-title" data-i18n="experience.item1.title">
+                  Data entry
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item1.company"
+                >
                   Proyecto escolar - Técnica N°1 "Manuel Belgrano"
                 </p>
-                <p class="timeline-description">
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item1.description"
+                >
                   Realicé tareas de data entry de información.
                 </p>
               </div>
@@ -351,12 +427,20 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">Mayo 2025 - Agosto 2025</div>
-                <h3 class="timeline-title">Pasantía Tecno 3F</h3>
-                <p class="timeline-company">
+                <h3 class="timeline-title" data-i18n="experience.item2.title">
+                  Pasantía Tecno 3F
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item2.company"
+                >
                   Pasantía en Escuela de Tecnología de la Municipalidad de Tres
                   de Febrero
                 </p>
-                <p class="timeline-description">
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item2.description"
+                >
                   Me encargué de programar el front-end de un campus virtual en
                   ReacJS.
                 </p>
@@ -367,11 +451,19 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">Marzo 2025 - Octubre 2025</div>
-                <h3 class="timeline-title">Documentación de sistema</h3>
-                <p class="timeline-company">
+                <h3 class="timeline-title" data-i18n="experience.item3.title">
+                  Documentación de sistema
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item3.company"
+                >
                   Proyecto escolar - Técnica N°1 "Manuel Belgrano"
                 </p>
-                <p class="timeline-description">
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item3.description"
+                >
                   Participé y dirigí el sector de documentación. Creación de
                   manuales de usuario y guías técnicas para el sistema
                   desarrollado.
@@ -383,11 +475,19 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">Diciembre 2024</div>
-                <h3 class="timeline-title">Diseño UX/UI</h3>
-                <p class="timeline-company">
+                <h3 class="timeline-title" data-i18n="experience.item4.title">
+                  Diseño UX/UI
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item4.company"
+                >
                   Proyectos académicos y personales
                 </p>
-                <p class="timeline-description">
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item4.description"
+                >
                   Diseño de sistema web escolar según requisitos de usuario.
                   Creación de wireframes, prototipos y diseño visual utilizando
                   herramientas como Figma.
@@ -399,11 +499,19 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">2024</div>
-                <h3 class="timeline-title">Base de datos</h3>
-                <p class="timeline-company">
+                <h3 class="timeline-title" data-i18n="experience.item5.title">
+                  Base de datos
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item5.company"
+                >
                   Proyecto para Municipalidad de 3F
                 </p>
-                <p class="timeline-description">
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item5.description"
+                >
                   Desarrollo de la base de datos para sistema de entrada de la
                   Municipalidad de Tres de Febrero.
                 </p>
@@ -414,9 +522,19 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">2024</div>
-                <h3 class="timeline-title">Data entry</h3>
-                <p class="timeline-company">Proyectos freelance / académicos</p>
-                <p class="timeline-description">
+                <h3 class="timeline-title" data-i18n="experience.item6.title">
+                  Data entry
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item6.company"
+                >
+                  Proyectos freelance / académicos
+                </p>
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item6.description"
+                >
                   Ingreso de datos acerca de profesores en la Institución.
                 </p>
               </div>
@@ -426,9 +544,19 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <div class="timeline-date">2023</div>
-                <h3 class="timeline-title">Sistema de Organización de aulas</h3>
-                <p class="timeline-company">Proyecto escolar</p>
-                <p class="timeline-description">
+                <h3 class="timeline-title" data-i18n="experience.item7.title">
+                  Sistema de Organización de aulas
+                </h3>
+                <p
+                  class="timeline-company"
+                  data-i18n="experience.item7.company"
+                >
+                  Proyecto escolar
+                </p>
+                <p
+                  class="timeline-description"
+                  data-i18n="experience.item7.description"
+                >
                   Desarrollo de sistema para la organización de aulas en la
                   Institución. Realizado en Python.
                 </p>
@@ -441,7 +569,7 @@
       <!-- Projects Section -->
       <section id="projects" class="projects section">
         <div class="container">
-          <h2 class="section-title">Proyectos</h2>
+          <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
           <div class="projects-grid">
             <!-- Proyecto 1 -->
             <article class="project-card">
@@ -453,8 +581,13 @@
                 />
               </div>
               <div class="project-content">
-                <h3 class="project-title">Campus virtual</h3>
-                <p class="project-description">
+                <h3 class="project-title" data-i18n="projects.item1.title">
+                  Campus virtual
+                </h3>
+                <p
+                  class="project-description"
+                  data-i18n="projects.item1.description"
+                >
                   Campus virtual realizado con el objetivo de mejorar la
                   experiencia de los usuarios.
                 </p>
@@ -485,7 +618,7 @@
                       />
                       <path d="M9 18c-4.51 2-5-2-7-2" />
                     </svg>
-                    <span>Código</span>
+                    <span data-i18n="projects.item1.code">Código</span>
                   </a>
                   <a
                     href="https://nimble-gecko-780e2e.netlify.app/"
@@ -510,7 +643,7 @@
                       <polyline points="15 3 21 3 21 9" />
                       <line x1="10" x2="21" y1="14" y2="3" />
                     </svg>
-                    <span>Demo</span>
+                    <span data-i18n="projects.item1.demo">Demo</span>
                   </a>
                 </div>
               </div>
@@ -526,8 +659,13 @@
                 />
               </div>
               <div class="project-content">
-                <h3 class="project-title">Sistema web escolar</h3>
-                <p class="project-description">
+                <h3 class="project-title" data-i18n="projects.item2.title">
+                  Sistema web escolar
+                </h3>
+                <p
+                  class="project-description"
+                  data-i18n="projects.item2.description"
+                >
                   Web informativa para mantener informados a las familias de
                   estudiantes sobre noticias, eventos y recursos escolares.
                 </p>
@@ -552,8 +690,13 @@
                 />
               </div>
               <div class="project-content">
-                <h3 class="project-title">App de insumos de mascotas</h3>
-                <p class="project-description">
+                <h3 class="project-title" data-i18n="projects.item3.title">
+                  App de insumos de mascotas
+                </h3>
+                <p
+                  class="project-description"
+                  data-i18n="projects.item3.description"
+                >
                   Aplicación móvil hecha para un proyecto escolar basada en que
                   el usuario compre insumos para sus mascotas de manera fácil y
                   rápida.
@@ -572,7 +715,9 @@
       <!-- Certifications Section -->
       <section id="certifications" class="certifications section">
         <div class="container">
-          <h2 class="section-title">Certificaciones</h2>
+          <h2 class="section-title" data-i18n="certifications.title">
+            Certificaciones
+          </h2>
           <div class="certifications-grid">
             <!-- Certificacion 1 -->
             <article
@@ -587,14 +732,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">Desarrollo Web</h3>
-                <p class="cert-card-description">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item1.name"
+                >
+                  Desarrollo Web
+                </h3>
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item1.description"
+                >
                   Formacion en fundamentos del desarrollo web y creacion de
                   paginas funcionales.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">Microsoft</span>
-                  <span class="cert-card-date">2021</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item1.issuer"
+                    >Microsoft</span
+                  >
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item1.date"
+                    >2021</span
+                  >
                 </div>
               </div>
             </article>
@@ -612,16 +773,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">UX/UI Design</h3>
-                <p class="cert-card-description">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item2.name"
+                >
+                  UX/UI Design
+                </h3>
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item2.description"
+                >
                   Certificacion profesional en diseño de interfaces y
                   experiencia de usuario, prototipado en Figma y research.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer"
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item2.issuer"
                     >Ministerio de Educación de CABA</span
                   >
-                  <span class="cert-card-date">2024</span>
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item2.date"
+                    >2024</span
+                  >
                 </div>
               </div>
             </article>
@@ -639,14 +814,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">Python Intermedio</h3>
-                <p class="cert-card-description">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item3.name"
+                >
+                  Python Intermedio
+                </h3>
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item3.description"
+                >
                   Curso avanzado de Python incluyendo estructuras de datos,
                   programacion orientada a objetos y manejo de archivos.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">UTN </span>
-                  <span class="cert-card-date">2023</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item3.issuer"
+                    >UTN
+                  </span>
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item3.date"
+                    >2023</span
+                  >
                 </div>
               </div>
             </article>
@@ -664,14 +855,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">Desarrollo Web con HTML</h3>
-                <p class="cert-card-description">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item4.name"
+                >
+                  Desarrollo Web con HTML
+                </h3>
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item4.description"
+                >
                   Creación de estructuras web con HTML, buenas prácticas y
                   armado de sitios responsivos.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">Educacion IT </span>
-                  <span class="cert-card-date">2024-2025</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item4.issuer"
+                    >Educacion IT
+                  </span>
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item4.date"
+                    >2024-2025</span
+                  >
                 </div>
               </div>
             </article>
@@ -689,16 +896,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item5.name"
+                >
                   Introducción a la Inteligencia Artificial Generativa
                 </h3>
-                <p class="cert-card-description">
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item5.description"
+                >
                   Conceptos base de inteligencia artificial generativa y
                   aplicaciones en contextos profesionales.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">Santander/MIT</span>
-                  <span class="cert-card-date">2025</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item5.issuer"
+                    >Santander/MIT</span
+                  >
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item5.date"
+                    >2025</span
+                  >
                 </div>
               </div>
             </article>
@@ -716,16 +937,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item6.name"
+                >
                   Introducción a la ciencia de datos
                 </h3>
-                <p class="cert-card-description">
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item6.description"
+                >
                   Conceptos base de ciencia de datos y aplicaciones en contextos
                   profesionales.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">Santander/IE</span>
-                  <span class="cert-card-date">2025</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item6.issuer"
+                    >Santander/IE</span
+                  >
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item6.date"
+                    >2025</span
+                  >
                 </div>
               </div>
             </article>
@@ -743,14 +978,30 @@
                 />
               </div>
               <div class="cert-card-info">
-                <h3 class="cert-card-name">Business English</h3>
-                <p class="cert-card-description">
+                <h3
+                  class="cert-card-name"
+                  data-i18n="certifications.item7.name"
+                >
+                  Business English
+                </h3>
+                <p
+                  class="cert-card-description"
+                  data-i18n="certifications.item7.description"
+                >
                   Conceptos base de inglés empresarial y aplicaciones en
                   contextos profesionales.
                 </p>
                 <div class="cert-card-meta">
-                  <span class="cert-card-issuer">Santander Open Academy</span>
-                  <span class="cert-card-date">2025</span>
+                  <span
+                    class="cert-card-issuer"
+                    data-i18n="certifications.item7.issuer"
+                    >Santander Open Academy</span
+                  >
+                  <span
+                    class="cert-card-date"
+                    data-i18n="certifications.item7.date"
+                    >2025</span
+                  >
                 </div>
               </div>
             </article>
@@ -762,11 +1013,18 @@
       <div class="cert-modal-overlay" id="cert-modal-overlay">
         <div class="cert-modal">
           <div class="cert-modal-header">
-            <h3 class="cert-modal-title" id="cert-modal-title">Certificado</h3>
+            <h3
+              class="cert-modal-title"
+              id="cert-modal-title"
+              data-i18n="certifications.modalTitle"
+            >
+              Certificado
+            </h3>
             <button
               class="cert-modal-close"
               id="cert-modal-close"
               aria-label="Cerrar visor"
+              data-i18n="certifications.closeAria"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -793,11 +1051,11 @@
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <div class="container">
-          <h2 class="section-title">Contacto</h2>
+          <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
           <div class="contact-content">
             <div class="contact-info">
-              <h3>Trabajemos juntos</h3>
-              <p>
+              <h3 data-i18n="contact.subtitle">Trabajemos juntos</h3>
+              <p data-i18n="contact.description">
                 Si tenes un proyecto en mente, no dudes en contactarme. Estoy
                 siempre abierta a nuevas oportunidades y colaboraciones.
               </p>
@@ -893,17 +1151,18 @@
             </div>
             <form id="contact-form" class="contact-form">
               <div class="form-group">
-                <label for="name">Nombre</label>
+                <label for="name" data-i18n="contact.form.name">Nombre</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
                   placeholder="Tu nombre"
+                  data-i18n-placeholder="contact.form.namePlaceholder"
                 />
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" data-i18n="contact.form.email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -913,27 +1172,35 @@
                 />
               </div>
               <div class="form-group">
-                <label for="subject">Asunto</label>
+                <label for="subject" data-i18n="contact.form.subject"
+                  >Asunto</label
+                >
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   required
                   placeholder="Asunto del mensaje"
+                  data-i18n-placeholder="contact.form.subjectPlaceholder"
                 />
               </div>
               <div class="form-group">
-                <label for="message">Mensaje</label>
+                <label for="message" data-i18n="contact.form.message"
+                  >Mensaje</label
+                >
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   required
                   placeholder="Tu mensaje..."
+                  data-i18n-placeholder="contact.form.messagePlaceholder"
                 ></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-submit">
-                <span class="btn-text">Enviar mensaje</span>
+                <span class="btn-text" data-i18n="contact.form.send"
+                  >Enviar mensaje</span
+                >
                 <span class="btn-loading" style="display: none">
                   <svg
                     class="spinner"
@@ -963,9 +1230,13 @@
     <footer class="footer">
       <div class="container">
         <p>
-          Diseñado y desarrollado por Ariela Faivisovich Krowicki
+          <span data-i18n="footer.credit"
+            >Diseñado y desarrollado por Ariela Faivisovich Krowicki</span
+          >
           <br />
-          &copy; 2026 Todos los derechos reservados.
+          <span data-i18n="footer.rights"
+            >&copy; 2026 Todos los derechos reservados.</span
+          >
         </p>
       </div>
     </footer>

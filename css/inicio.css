@@ -205,6 +205,82 @@ img {
   transition: all var(--transition-fast);
 }
 
+/* Language Dropdown */
+.nav-lang {
+  position: relative;
+}
+
+.nav-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-lang-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.nav-lang-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.nav-lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  z-index: 1000;
+}
+
+.nav-lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.lang-option:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.lang-option.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
@@ -1316,6 +1392,57 @@ img {
 
   .nav-link::after {
     display: none;
+  }
+
+  .nav-lang {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .nav-lang-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .nav-lang-btn:hover {
+    color: var(--color-primary);
+    border: none;
+  }
+
+  .nav-lang-dropdown {
+    position: static;
+    margin-top: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-lang-dropdown.open {
+    max-height: 200px;
+  }
+
+  .lang-option {
+    padding: 0.75rem 1.5rem 0.75rem 3rem;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
+  .lang-option:hover,
+  .lang-option.active {
+    background: rgba(0, 212, 170, 0.1);
+    color: var(--color-primary);
   }
 
   /* Animación hamburguesa a X */
