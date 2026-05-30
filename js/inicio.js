@@ -4,6 +4,7 @@ const translations = {
     nav: {
       home: "Inicio",
       about: "Sobre mí",
+      education: "Educación",
       experience: "Experiencia",
       projects: "Proyectos",
       certifications: "Certificaciones",
@@ -24,8 +25,38 @@ const translations = {
       p2: "Me especializo en HTML, CSS, JavaScript y frameworks modernos. Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para estar al día con las últimas tendencias del desarrollo web.",
       skills: "Habilidades técnicas",
     },
+    education: {
+      title: "Educación",
+      item1: {
+        title: "Técnica en Programación",
+        institution: 'Escuela Técnica N°1 "Manuel Belgrano"',
+        date: "2022 - 2026",
+        description:
+          "Educación secundaria técnica con orientación en programación. Desarrollo de software, bases de datos, y proyectos integrales.",
+      },
+      item2: {
+        title: "Diplomatura en Desarrollo Web Full Stack",
+        institution: "UTN",
+        date: "2026 - Actualidad",
+        description:
+          "Formación avanzada en desarrollo web full stack, abarcando tecnologías frontend y backend, bases de datos, y mejores prácticas de desarrollo.",
+      },
+      item3: {
+        title: "Tramo de formación pedagógica",
+        institution: "Universidad FASTA",
+        date: "2025 - actualidad",
+        description:
+          "Formación pedagógica para complementar mi perfil técnico y desarrollar habilidades de enseñanza, comunicación y gestión educativa.",
+      },
+    },
     experience: {
       title: "Experiencia",
+      item0: {
+        title: "Profesora de computación",
+        company: "Escuela Manuel Belgrano (Primaria)",
+        description:
+          "Enseño computación y programación a estudiantes de primaria, fomentando el pensamiento lógico y las habilidades digitales desde temprana edad.",
+      },
       item1: {
         title: "Data entry",
         company: 'Proyecto escolar - Técnica N°1 "Manuel Belgrano"',
@@ -87,6 +118,12 @@ const translations = {
         description:
           "Aplicación móvil hecha para un proyecto escolar basada en que el usuario compre insumos para sus mascotas de manera fácil y rápida.",
       },
+      item4: {
+        title: "Catálogo geek de videojuegos y anime",
+        description: "Proyecto educativo realizado en ReactJS + vite.",
+        code: "Código",
+        demo: "Demo",
+      },
     },
     certifications: {
       title: "Certificaciones",
@@ -95,21 +132,21 @@ const translations = {
       item1: {
         name: "Desarrollo Web",
         description:
-          "Formacion en fundamentos del desarrollo web y creacion de paginas funcionales.",
+          "Formación en fundamentos del desarrollo web y creación de páginas funcionales.",
         issuer: "Microsoft",
         date: "2021",
       },
       item2: {
         name: "UX/UI Design",
         description:
-          "Certificacion profesional en diseño de interfaces y experiencia de usuario, prototipado en Figma y research.",
+          "Certificación profesional en diseño de interfaces y experiencia de usuario, prototipado en Figma y research.",
         issuer: "Ministerio de Educación de CABA",
         date: "2024",
       },
       item3: {
         name: "Python Intermedio",
         description:
-          "Curso avanzado de Python incluyendo estructuras de datos, programacion orientada a objetos y manejo de archivos.",
+          "Curso avanzado de Python incluyendo estructuras de datos, programación orientada a objetos y manejo de archivos.",
         issuer: "UTN",
         date: "2023",
       },
@@ -117,7 +154,7 @@ const translations = {
         name: "Desarrollo Web con HTML",
         description:
           "Creación de estructuras web con HTML, buenas prácticas y armado de sitios responsivos.",
-        issuer: "Educacion IT",
+        issuer: "Educación IT",
         date: "2024-2025",
       },
       item5: {
@@ -146,7 +183,7 @@ const translations = {
       title: "Contacto",
       subtitle: "Trabajemos juntos",
       description:
-        "Si tenes un proyecto en mente, no dudes en contactarme. Estoy siempre abierta a nuevas oportunidades y colaboraciones.",
+        "Si tenés un proyecto en mente, no dudes en contactarme. Estoy siempre abierta a nuevas oportunidades y colaboraciones.",
       form: {
         name: "Nombre",
         namePlaceholder: "Tu nombre",
@@ -167,6 +204,7 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
+      education: "Education",
       experience: "Experience",
       projects: "Projects",
       certifications: "Certifications",
@@ -187,8 +225,38 @@ const translations = {
       p2: "I specialize in HTML, CSS, JavaScript and modern frameworks. I'm always learning new technologies and improving my skills to stay up to date with the latest web development trends.",
       skills: "Technical skills",
     },
+    education: {
+      title: "Education",
+      item1: {
+        title: "Programming Technician",
+        institution: 'Technical School N°1 "Manuel Belgrano"',
+        date: "2022 - 2026",
+        description:
+          "Technical secondary education with programming orientation. Software development, databases, and comprehensive projects.",
+      },
+      item2: {
+        title: "Diploma in Full Stack Web Development",
+        institution: "UTN",
+        date: "2026 - Present",
+        description:
+          "Advanced training in full stack web development, covering frontend and backend technologies, databases, and development best practices.",
+      },
+      item3: {
+        title: "Pedagogical Training Course",
+        institution: "Universidad FASTA",
+        date: "2025 - present",
+        description:
+          "Pedagogical training to complement my technical profile and develop teaching, communication and educational management skills.",
+      },
+    },
     experience: {
       title: "Experience",
+      item0: {
+        title: "Computer Teacher",
+        company: "Manuel Belgrano School (Elementary)",
+        description:
+          "I teach computing and programming to elementary students, fostering logical thinking and digital skills from an early age.",
+      },
       item1: {
         title: "Data Entry",
         company: 'School Project - Técnica N°1 "Manuel Belgrano"',
@@ -250,6 +318,12 @@ const translations = {
         description:
           "Mobile application made for a school project based on users buying pet supplies easily and quickly.",
       },
+      item4: {
+        title: "Geek Catalog of videogames and anime",
+        description: "Educational project made in ReactJS + vite.",
+        code: "Code",
+        demo: "Demo",
+      },
     },
     certifications: {
       title: "Certifications",
@@ -280,7 +354,7 @@ const translations = {
         name: "Web Development with HTML",
         description:
           "Creation of web structures with HTML, best practices and responsive site building.",
-        issuer: "Educacion IT",
+        issuer: "Educación IT",
         date: "2024-2025",
       },
       item5: {
@@ -328,12 +402,12 @@ const translations = {
   },
 };
 
-// Función para obtener valor anidado de un objeto
+// ===== FUNCIÓN PARA OBTENER VALOR ANIDADO =====
 function getNestedValue(obj, path) {
   return path.split(".").reduce((acc, part) => acc && acc[part], obj);
 }
 
-// Función para cambiar idioma
+// ===== FUNCIÓN PARA CAMBIAR IDIOMA =====
 function setLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
@@ -375,12 +449,12 @@ function setLanguage(lang) {
   // Guardar preferencia
   localStorage.setItem("preferred-lang", lang);
 
-  console.log("[v0] Idioma cambiado a:", lang);
+  console.log("[i18n] Idioma cambiado a:", lang);
 }
 
 // ===== INICIALIZACIÓN =====
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[v0] DOM cargado, iniciando scripts...");
+  console.log("[App] DOM cargado, iniciando...");
 
   // ===== LANGUAGE DROPDOWN =====
   const langDropdown = document.querySelector(".nav-lang-dropdown");
@@ -388,7 +462,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const langOptions = document.querySelectorAll(".lang-option");
 
   if (langBtn && langDropdown) {
-    // Toggle dropdown
     langBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       langDropdown.classList.toggle("open");
@@ -398,7 +471,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // Seleccionar idioma
     langOptions.forEach((option) => {
       option.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -409,7 +481,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Cerrar al hacer click fuera
     document.addEventListener("click", (e) => {
       if (!langDropdown.contains(e.target)) {
         langDropdown.classList.remove("open");
@@ -417,7 +488,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Cerrar con Escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && langDropdown.classList.contains("open")) {
         langDropdown.classList.remove("open");
@@ -426,16 +496,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cargar idioma guardado o detectar del navegador
+  // Cargar idioma guardado o detectar navegador
   const savedLang = localStorage.getItem("preferred-lang");
   const browserLang = navigator.language.startsWith("es") ? "es" : "en";
-  const initialLang = savedLang || "es";
+  const initialLang = savedLang || (browserLang === "es" ? "es" : "en");
 
-  // Solo aplicar si no es español (el HTML ya está en español)
   if (initialLang !== "es") {
     setLanguage(initialLang);
   } else {
-    // Actualizar UI del dropdown para español
+    // Asegurar que el botón active sea español
     document.querySelectorAll(".lang-option").forEach((option) => {
       option.classList.toggle("active", option.dataset.lang === "es");
     });
@@ -446,21 +515,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof window !== "undefined" && window.emailjs) {
     emailjsInstance = window.emailjs;
     emailjsInstance.init("VH2Qm-256a4H7GEtp");
-    console.log("[v0] EmailJS inicializado");
+    console.log("[EmailJS] Inicializado correctamente");
   } else {
-    console.log("[v0] EmailJS no disponible");
+    console.warn("[EmailJS] No disponible");
   }
 
-  // ===== NAVEGACIÓN =====
+  // ===== NAVEGACIÓN (menú hamburguesa, scroll, activo) =====
   const nav = document.getElementById("nav");
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  console.log("[v0] Elementos nav:", { nav, navToggle, navMenu });
-
   if (navToggle && navMenu) {
-    // Toggle menu hamburguesa
     navToggle.addEventListener("click", () => {
       const isActive = navToggle.classList.toggle("active");
       navMenu.classList.toggle("active");
@@ -472,7 +538,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = isActive ? "hidden" : "";
     });
 
-    // Cerrar menu al hacer click en un link
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         navToggle.classList.remove("active");
@@ -483,7 +548,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Cerrar menu al hacer click fuera
     document.addEventListener("click", (e) => {
       if (
         navMenu.classList.contains("active") &&
@@ -498,7 +562,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Cerrar menu con tecla Escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && navMenu.classList.contains("active")) {
         navToggle.classList.remove("active");
@@ -516,28 +579,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== NAVEGACIÓN ACTIVA =====
+  // ===== NAVEGACIÓN ACTIVA POR SECCIÓN =====
   const sections = document.querySelectorAll("section[id]");
-
   function highlightNavOnScroll() {
     const scrollY = window.pageYOffset;
-
     sections.forEach((section) => {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 100;
       const sectionId = section.getAttribute("id");
       const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLinks.forEach((link) => link.classList.remove("active"));
         if (navLink) navLink.classList.add("active");
       }
     });
   }
-
   window.addEventListener("scroll", highlightNavOnScroll);
+  highlightNavOnScroll(); // llamada inicial
 
-  // ===== ANIMACIONES AL SCROLL =====
+  // ===== ANIMACIONES AL SCROLL (Intersection Observer) =====
   function initScrollAnimations() {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -549,17 +609,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
-
     const animatedElements = document.querySelectorAll(
-      ".about-content, .skills-grid .skill-item, .timeline-item, .project-card, .cert-card, .contact-content",
+      ".about-content, .skills-grid .skill-item, .timeline-item, .project-card, .cert-card, .contact-content, .edu-card",
     );
-
     animatedElements.forEach((el) => {
       el.classList.add("fade-in");
       observer.observe(el);
     });
   }
-
   initScrollAnimations();
 
   // ===== FORMULARIO DE CONTACTO =====
@@ -594,14 +651,13 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         if (!emailjsInstance) throw new Error("EmailJS no disponible");
 
-        // 📩 1. Mail para vos
+        // Enviar a tu bandeja
         await emailjsInstance.send(
           "service_lk20xd6",
           "template_vleqdoa",
           templateParams,
         );
-
-        // 📩 2. Auto-respuesta para el usuario
+        // Enviar auto-respuesta al usuario
         await emailjsInstance.send(
           "service_lk20xd6",
           "template_8j0oh3l",
@@ -613,7 +669,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "Mensaje enviado correctamente. Te voy a responder pronto :)";
           formStatus.classList.add("success");
         }
-
         contactForm.reset();
       } catch (error) {
         console.error("EmailJS Error:", error);
@@ -630,33 +685,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== CERTIFICACIONES =====
+  // ===== VISOR DE CERTIFICACIONES =====
   const certCards = document.querySelectorAll(".cert-card");
   const certModalOverlay = document.getElementById("cert-modal-overlay");
   const certModalClose = document.getElementById("cert-modal-close");
   const certModalTitle = document.getElementById("cert-modal-title");
   const certModalBody = document.getElementById("cert-modal-body");
 
-  // Abrir modal del visor
   function openCertModal(card) {
     const file = card.dataset.certFile;
     const type = card.dataset.certType;
     const name =
       card.querySelector(".cert-card-name")?.textContent || "Certificado";
-
     certModalTitle.textContent = name;
-
     if (type === "pdf") {
       certModalBody.innerHTML = `<iframe src="${file}" title="${name}"></iframe>`;
     } else {
       certModalBody.innerHTML = `<img src="${file}" alt="${name}" />`;
     }
-
     certModalOverlay.classList.add("active");
     document.body.style.overflow = "hidden";
   }
 
-  // Cerrar modal
   function closeCertModal() {
     certModalOverlay.classList.remove("active");
     document.body.style.overflow = "";
@@ -665,12 +715,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // Click en cada card para abrir el visor
   certCards.forEach((card) => {
     card.addEventListener("click", () => openCertModal(card));
   });
 
-  // Cerrar modal
   if (certModalClose) {
     certModalClose.addEventListener("click", closeCertModal);
   }
@@ -679,7 +727,6 @@ document.addEventListener("DOMContentLoaded", () => {
     certModalOverlay.addEventListener("click", (e) => {
       if (e.target === certModalOverlay) closeCertModal();
     });
-
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && certModalOverlay.classList.contains("active")) {
         closeCertModal();
@@ -687,7 +734,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== SMOOTH SCROLL =====
+  // ===== SMOOTH SCROLL para enlaces internos =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -696,19 +743,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const navHeight = document.querySelector(".nav")?.offsetHeight || 0;
         const targetPosition =
           target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
       }
     });
   });
 
-  // ===== FOOTER YEAR =====
-  const footerYear = document.querySelector(".footer-year");
-  if (footerYear) footerYear.textContent = new Date().getFullYear();
-
-  // ===== PARALLAX HERO =====
+  // ===== PARALLAX en imagen de héroe (solo desktop) =====
   function handleParallax() {
     if (window.innerWidth > 768) {
       const heroImage = document.querySelector(".hero-image-wrapper");
@@ -717,45 +757,36 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
   window.addEventListener("scroll", handleParallax);
 
-  // ===== TYPING EFFECT =====
+  // ===== EFECTO DE MÁQUINA DE ESCRIBIR =====
   function typeWriter(element, text, speed = 70) {
-    console.log("[v0] Iniciando typewriter con texto:", text);
     let i = 0;
     const cursor = document.querySelector(".cursor");
     if (cursor) cursor.classList.add("typing");
-
     element.textContent = "";
-
     function type() {
       if (i < text.length) {
         element.textContent += text.charAt(i);
         i++;
         setTimeout(type, speed);
       } else {
-        console.log("[v0] Typewriter completado");
         if (cursor) cursor.classList.remove("typing");
       }
     }
-
     type();
   }
 
-  // Iniciar efecto de escritura
   const typedName = document.getElementById("typed-name");
-  console.log("[v0] Elemento typed-name:", typedName);
-
   if (typedName) {
     setTimeout(() => {
-      console.log("[v0] Ejecutando typeWriter...");
       typeWriter(typedName, "Ariela Faivisovich Krowicki");
     }, 600);
   } else {
-    console.log("[v0] ERROR: No se encontró el elemento #typed-name");
+    console.warn("[App] No se encontró #typed-name");
   }
 
+  // ===== CIERRE DEL MENÚ HAMBURGUESA AL REDIMENSIONAR =====
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
@@ -774,5 +805,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 250);
   });
 
-  console.log("[v0] Portfolio cargado correctamente");
+  console.log("[App] Portfolio inicializado correctamente");
 });
