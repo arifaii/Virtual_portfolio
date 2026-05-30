@@ -1,4 +1,3 @@
-// ===== TRADUCCIONES =====
 const translations = {
   es: {
     nav: {
@@ -15,13 +14,13 @@ const translations = {
     hero: {
       greeting: "Hola, soy",
       description:
-        "Soy una desarrolladora frontend y diseñadora UX/UI apasionada por crear experiencias digitales atractivas y funcionales. Con un enfoque en la usabilidad y el diseño centrado en el usuario, me esfuerzo por transformar ideas en productos digitales excepcionales.",
+        "Soy desarrolladora frontend y diseñadora UX/UI apasionada por crear experiencias digitales atractivas y funcionales. Con un enfoque en la usabilidad y el diseño centrado en el usuario, me esfuerzo por transformar ideas en productos digitales excepcionales.",
       viewProjects: "Ver proyectos",
       contactMe: "Contactarme",
     },
     about: {
       title: "Sobre mí",
-      p1: "Soy una desarrolladora frontend apasionada con experiencia en crear interfaces de usuario modernas y responsivas. Mi objetivo es combinar diseño y funcionalidad para crear experiencias web que los usuarios amen.",
+      p1: "Soy desarrolladora frontend apasionada con experiencia en crear interfaces de usuario modernas y responsivas. Mi objetivo es combinar diseño y funcionalidad para crear experiencias web que los usuarios amen.",
       p2: "Me especializo en HTML, CSS, JavaScript y frameworks modernos. Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para estar al día con las últimas tendencias del desarrollo web.",
       skills: "Habilidades técnicas",
     },
@@ -402,17 +401,13 @@ const translations = {
   },
 };
 
-// ===== FUNCIÓN PARA OBTENER VALOR ANIDADO =====
 function getNestedValue(obj, path) {
   return path.split(".").reduce((acc, part) => acc && acc[part], obj);
 }
 
-// ===== FUNCIÓN PARA CAMBIAR IDIOMA =====
 function setLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
-
-  // Actualizar elementos con data-i18n
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = getNestedValue(t, key);
@@ -424,8 +419,6 @@ function setLanguage(lang) {
       }
     }
   });
-
-  // Actualizar placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");
     const value = getNestedValue(t, key);
@@ -446,21 +439,15 @@ function setLanguage(lang) {
     option.classList.toggle("active", option.dataset.lang === lang);
   });
 
-  // Guardar preferencia
   localStorage.setItem("preferred-lang", lang);
 
   console.log("[i18n] Idioma cambiado a:", lang);
 }
-
-// ===== INICIALIZACIÓN =====
 document.addEventListener("DOMContentLoaded", () => {
   console.log("[App] DOM cargado, iniciando...");
-
-  // ===== LANGUAGE DROPDOWN =====
   const langDropdown = document.querySelector(".nav-lang-dropdown");
   const langBtn = document.querySelector(".nav-lang-btn");
   const langOptions = document.querySelectorAll(".lang-option");
-
   if (langBtn && langDropdown) {
     langBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -496,7 +483,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cargar idioma guardado o detectar navegador
+  const savedLang = localStorage.getItem("preferred-lang");
+  const browserLang = navigator.language.startsWith("es") ? "es" : "en";
+  const initialLang = savedLang || (browserLang === "es" ? "es" : "en");
   const savedLang = localStorage.getItem("preferred-lang");
   const browserLang = navigator.language.startsWith("es") ? "es" : "en";
   const initialLang = savedLang || (browserLang === "es" ? "es" : "en");
@@ -504,13 +493,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (initialLang !== "es") {
     setLanguage(initialLang);
   } else {
-    // Asegurar que el botón active sea español
     document.querySelectorAll(".lang-option").forEach((option) => {
       option.classList.toggle("active", option.dataset.lang === "es");
     });
   }
 
-  // ===== EMAILJS =====
   let emailjsInstance = null;
   if (typeof window !== "undefined" && window.emailjs) {
     emailjsInstance = window.emailjs;
@@ -519,8 +506,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("[EmailJS] No disponible");
   }
-
-  // ===== NAVEGACIÓN (menú hamburguesa, scroll, activo) =====
   const nav = document.getElementById("nav");
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
@@ -579,7 +564,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== NAVEGACIÓN ACTIVA POR SECCIÓN =====
   const sections = document.querySelectorAll("section[id]");
   function highlightNavOnScroll() {
     const scrollY = window.pageYOffset;
@@ -595,9 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   window.addEventListener("scroll", highlightNavOnScroll);
-  highlightNavOnScroll(); // llamada inicial
-
-  // ===== ANIMACIONES AL SCROLL (Intersection Observer) =====
+  highlightNavOnScroll();
   function initScrollAnimations() {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -618,8 +600,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   initScrollAnimations();
-
-  // ===== FORMULARIO DE CONTACTO =====
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
   const submitBtn = document.querySelector(".btn-submit");
@@ -651,13 +631,11 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         if (!emailjsInstance) throw new Error("EmailJS no disponible");
 
-        // Enviar a tu bandeja
         await emailjsInstance.send(
           "service_lk20xd6",
           "template_vleqdoa",
           templateParams,
         );
-        // Enviar auto-respuesta al usuario
         await emailjsInstance.send(
           "service_lk20xd6",
           "template_8j0oh3l",
@@ -685,7 +663,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== VISOR DE CERTIFICACIONES =====
   const certCards = document.querySelectorAll(".cert-card");
   const certModalOverlay = document.getElementById("cert-modal-overlay");
   const certModalClose = document.getElementById("cert-modal-close");
@@ -734,7 +711,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ===== SMOOTH SCROLL para enlaces internos =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -748,7 +724,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== PARALLAX en imagen de héroe (solo desktop) =====
   function handleParallax() {
     if (window.innerWidth > 768) {
       const heroImage = document.querySelector(".hero-image-wrapper");
@@ -759,7 +734,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("scroll", handleParallax);
 
-  // ===== EFECTO DE MÁQUINA DE ESCRIBIR =====
   function typeWriter(element, text, speed = 70) {
     let i = 0;
     const cursor = document.querySelector(".cursor");
@@ -786,7 +760,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("[App] No se encontró #typed-name");
   }
 
-  // ===== CIERRE DEL MENÚ HAMBURGUESA AL REDIMENSIONAR =====
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
