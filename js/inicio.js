@@ -425,16 +425,13 @@ function setLanguage(lang) {
     if (value) el.placeholder = value;
   });
 
-  // Actualizar el lang del HTML
   document.documentElement.lang = lang;
 
-  // Actualizar botón de idioma actual
   const currentLangEl = document.querySelector(".current-lang");
   if (currentLangEl) {
     currentLangEl.textContent = lang.toUpperCase();
   }
 
-  // Actualizar opciones activas
   document.querySelectorAll(".lang-option").forEach((option) => {
     option.classList.toggle("active", option.dataset.lang === lang);
   });
@@ -483,9 +480,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const savedLang = localStorage.getItem("preferred-lang");
-  const browserLang = navigator.language.startsWith("es") ? "es" : "en";
-  const initialLang = savedLang || (browserLang === "es" ? "es" : "en");
   const savedLang = localStorage.getItem("preferred-lang");
   const browserLang = navigator.language.startsWith("es") ? "es" : "en";
   const initialLang = savedLang || (browserLang === "es" ? "es" : "en");
