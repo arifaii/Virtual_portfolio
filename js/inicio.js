@@ -51,47 +51,53 @@ const translations = {
     experience: {
       title: "Experiencia",
       item0: {
+        title: "Community manager y desarrolladora web.",
+        company: "Seminario Rabínico Latinoamericano 'Marshall T. Meyer'",
+        description:
+          "Encargada de gestionar las redes sociales y del mantenimiento de la página web de la institución.",
+      },
+      item1: {
         title: "Profesora de computación",
         company: "Escuela Manuel Belgrano (Primaria)",
         description:
           "Enseño computación y programación a estudiantes de primaria, fomentando el pensamiento lógico y las habilidades digitales desde temprana edad.",
       },
-      item1: {
+      item2: {
         title: "Data entry",
         company: 'Proyecto escolar - Técnica N°1 "Manuel Belgrano"',
         description: "Realicé tareas de data entry de información.",
       },
-      item2: {
+      item3: {
         title: "Pasantía Tecno 3F",
         company:
           "Pasantía en Escuela de Tecnología de la Municipalidad de Tres de Febrero",
         description:
           "Me encargué de programar el front-end de un campus virtual en ReactJS.",
       },
-      item3: {
+      item4: {
         title: "Documentación de sistema",
         company: 'Proyecto escolar - Técnica N°1 "Manuel Belgrano"',
         description:
           "Participé y dirigí el sector de documentación. Creación de manuales de usuario y guías técnicas para el sistema desarrollado.",
       },
-      item4: {
+      item5: {
         title: "Diseño UX/UI",
         company: "Proyectos académicos y personales",
         description:
           "Diseño de sistema web escolar según requisitos de usuario. Creación de wireframes, prototipos y diseño visual utilizando herramientas como Figma.",
       },
-      item5: {
+      item6: {
         title: "Base de datos",
         company: "Proyecto para Municipalidad de 3F",
         description:
           "Desarrollo de la base de datos para sistema de entrada de la Municipalidad de Tres de Febrero.",
       },
-      item6: {
+      item7: {
         title: "Data entry",
         company: "Proyectos freelance / académicos",
         description: "Ingreso de datos acerca de profesores en la Institución.",
       },
-      item7: {
+      item8: {
         title: "Sistema de Organización de aulas",
         company: "Proyecto escolar",
         description:
@@ -251,47 +257,53 @@ const translations = {
     experience: {
       title: "Experience",
       item0: {
+        title: "Community Manager and Web Developer",
+        company: "Seminario Rabínico Latinoamericano'Marshall T. Meyer'",
+        description:
+          "Responsible for managing the institution's social media accounts and maintaining its website.",
+      },
+      item1: {
         title: "Computer Teacher",
         company: "Manuel Belgrano School (Elementary)",
         description:
           "I teach computing and programming to elementary students, fostering logical thinking and digital skills from an early age.",
       },
-      item1: {
+      item2: {
         title: "Data Entry",
         company: 'School Project - Técnica N°1 "Manuel Belgrano"',
         description: "I performed data entry tasks.",
       },
-      item2: {
+      item3: {
         title: "Tecno 3F Internship",
         company:
           "Internship at Technology School of Tres de Febrero Municipality",
         description:
           "I was in charge of programming the front-end of a virtual campus in ReactJS.",
       },
-      item3: {
+      item4: {
         title: "System Documentation",
         company: 'School Project - Técnica N°1 "Manuel Belgrano"',
         description:
           "I participated and led the documentation sector. Creation of user manuals and technical guides for the developed system.",
       },
-      item4: {
+      item5: {
         title: "UX/UI Design",
         company: "Academic and personal projects",
         description:
           "Design of school web system according to user requirements. Creation of wireframes, prototypes and visual design using tools like Figma.",
       },
-      item5: {
+      item6: {
         title: "Database",
         company: "Project for 3F Municipality",
         description:
           "Development of the database for the Tres de Febrero Municipality entry system.",
       },
-      item6: {
+      item7: {
         title: "Data Entry",
         company: "Freelance / academic projects",
         description: "Data entry about teachers in the Institution.",
       },
-      item7: {
+      item8: {
         title: "Classroom Organization System",
         company: "School project",
         description:
